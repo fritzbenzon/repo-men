@@ -1,0 +1,40 @@
+Email to Case Creation
+1.  Email to Case Setup
+	-Routing Addresses (email address only is specified in fd) - if email address given is not created routing address cant be activated
+	-Email to Case Queue (missing members?email address?) - CREATED
+	-no record types created (enquiry as default)
+	-'case creation mode' field not created(default to 'email')
+	-assignment rule created (no email template no email will be sent) - CREATED
+	-CSO should have 'Manage Cases' permission
+	-
+	
+	
+to do:
+	- test email to case and check field mapping
+	- check assignment rule if it can notify previous owner and new owner
+	- assign Enquiry Record Type as default email to case
+	
+	
+	
+	
+CASE CHANNELS
+
+Questions: 
+
+1. how to match emails with contact record?
+2. where is the setting page where bcc can be disabled?
+3. how to determine if email is an out of office. (subject out of office and ooo)
+4. how to associate new email associated to old case?
+
+
+
+
+
+Apex Classes/Triggers
+
+1. (Class, p. 16) hide delete button for email records.
+   (Trigger p. 17)  call on class to perform logic
+   
+2. (Class p. 21) determine if an incoming email is out of office reply, if it is then email will not be included in email related list in case.
+   (Trigger p 21) call on class to perform logic
+ 
